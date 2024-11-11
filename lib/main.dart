@@ -24,13 +24,10 @@ class MyApp extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               padding: EdgeInsets.all(25),
-              child: Text(
-                "Arif Hidayat",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Icon(
+                Icons.home,
+                size: 100,
+                color: Colors.white,
               ),
             ),
           )),
