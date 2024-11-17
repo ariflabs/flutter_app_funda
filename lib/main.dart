@@ -1,7 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,9 +11,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: Scaffold(
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            // Big Box
+            Container(
+              width: 300,
+              height: 300,
+              color: Colors.deepPurple,
+            ),
+
+            // Medium Box
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.deepPurple[400],
+            ),
+
+            // Small Box
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.deepPurple[300],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
