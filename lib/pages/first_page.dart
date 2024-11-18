@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 // import 'package:funda_app/pages/second_page.dart';
@@ -18,6 +18,44 @@ class FirstPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+        ),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.deepPurple[100],
+        child: Column(
+          children: [
+            // place your drawer header here
+            DrawerHeader(
+              child: Icon(
+                Icons.person,
+                size: 48,
+              ),
+            ),
+
+            // Home page tile list
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+                // navigate to the Home page
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+
+            // Seeting page tile list
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("Setting"),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+                // navigate to the Setting page
+                Navigator.pushNamed(context, '/settingpage');
+              },
+            ),
+          ],
         ),
       ),
       body: Center(
